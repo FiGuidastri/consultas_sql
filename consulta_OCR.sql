@@ -1,3 +1,9 @@
+--Autor: Raphael Bertodo
+--Editor: Filipe Guidastri
+--Projeto: Estudo OCR
+--Servidor: 10.0.1.36
+--Banco: [9999901_Radar]
+
 SELECT * FROM 
 					(SELECT 
 							DISTINCT T.trf_big_ID AS ID,
