@@ -1,3 +1,11 @@
+/*
+Consulta para extrair dados do SAT de 15 em 15 minutos
+Autor: Filipe Guidastri
+Data: 21/09/2023
+Servidor: 10.0.1.36
+Banco:0888801_Radar
+*/
+
 SELECT
 	T.trf_big_ID as ID,
 	CONVERT(varchar(12), T.trf_dtt_DataHora, 23) as Data,
