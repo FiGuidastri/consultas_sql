@@ -1,5 +1,5 @@
 /*
-Consulta para extrair dados do SAT de 15 em 15 minutos
+Consulta para extrair dados do SAT passagens únicas
 Autor: Filipe Guidastri
 Data: 21/09/2023
 Servidor: 10.0.1.36
