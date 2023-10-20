@@ -1,13 +1,13 @@
-select 
-	CONVERT(VARCHAR(12), T.Data, 103) as DataPassagem, --tratamento de data
-	t.Praca,
-	t.Categoria,
-	t.Tipo,
-	t.Receita,
-	t.fluxo,
-	t.EixoEq,
-	t.Sentido
-from 
-	TRAFEGO_REALIZADO t
-where 
-	Data between '20160301' and '20231231'
+SELECT 
+    CONVERT(VARCHAR(10), CONVERT(DATE, CONVERT(CHAR(8), T.Data, 112)), 103) as DataPassagem, -- Formatação de data
+    T.Praca,
+    T.Categoria,
+    T.Tipo,
+    T.Receita,
+    T.Fluxo,
+    T.EixoEq,
+    T.Sentido
+FROM 
+    TRAFEGO_REALIZADO T
+WHERE 
+    T.Data BETWEEN 20160301 AND 20231231
