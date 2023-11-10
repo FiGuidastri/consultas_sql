@@ -19,8 +19,11 @@ SELECT * FROM
 							CONCAT ('Km',' ',F.fxa_sml_Klm, '+', F.fxa_sml_Mts,' ','m') AS Localizacao,
 							CASE E.eqp_vch_CdgCln
 											WHEN 'RD001' THEN 'P1 - Avai'
+											WHEN 'SPL1940' THEN 'P1 - Avai'
 											WHEN 'RD002' THEN 'P2 - Pirajui'
+											WHEN 'SPL1950' THEN 'P2 - Pirajui'
 											WHEN 'RD003' THEN 'P3 - Promissao'
+											WHEN 'SPL1951' THEN 'P3 - Promissao'
 											WHEN 'SPL1692' THEN 'P8 - Castilho'
 											WHEN 'SPL1714' THEN 'P4 - Glicerio'
 											WHEN 'SPL1725' THEN 'P5 - Rubiacea'
@@ -49,4 +52,4 @@ SELECT * FROM
     								
 						)V
 
-			  WHERE Data BETWEEN '20231001' AND '20231007'
+			  WHERE Data BETWEEN '20230801' AND '20230901'
