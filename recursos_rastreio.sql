@@ -1,6 +1,8 @@
 SELECT
 	R.Prefixo as Recurso,
+	T.HoraMarcacao,
 	CONVERT(VARCHAR(12), T.DataMarcacao, 103) as Data,
+	CONVERT(TIME, T.HoraMarcacao) as Hora,
 	RO.SiglaRodovia as Rodovia,
 	T.KM as KM,
 	T.MT,
