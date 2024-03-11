@@ -2,6 +2,8 @@
 Consulta: Todas as passagens de pedágios com placas registradas entre 2016 e 2022
 Autor: Raphael Bertodo
 Editor: Filipe Guidastri
+Servidor: 10.0.2.11
+Banco: VR00_VIARONDON
 */
 
 SELECT CONVERT(VARCHAR(10), t.DataOcorrencia, 103) AS DataPassagem,
@@ -24,7 +26,7 @@ LEFT JOIN MEIOPAGAMENTO L ON TD.IdMeioPagamento = L.IdMeioPagamento
 INNER JOIN SgCfgCobrancaMeioPagamento CB ON CB.IdCobranca = T.Cobranca
 WHERE 
 	t.Cobranca IN ('1', '6') 
-	AND CAST(t.DataOcorrencia AS DATE) BETWEEN '2016-01-01' AND '2022-12-31'
+	AND CAST(t.DataOcorrencia AS DATE) BETWEEN '2022-01-01' AND '2022-12-31'
 GROUP BY
 	t.PlacaOperador,
 	t.CategoriaClassificada,
@@ -62,7 +64,7 @@ INNER JOIN SgCfgCobrancaMeioPagamento CB ON CB.IdCobranca = T.Cobranca
 WHERE 
 	t.Cobranca IN ('1', '3', '6') 
 	AND t.IdAcaoCorrecao <> '4'
-	AND CAST(t.DataOcorrencia AS DATE) BETWEEN '2016-01-01' AND '2022-12-31'
+	AND CAST(t.DataOcorrencia AS DATE) BETWEEN '2022-01-01' AND '2022-12-31'
 GROUP BY
 	t.PlacaOperador,
 	t.CategoriaClassificada,
